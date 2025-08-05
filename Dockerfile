@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
 # Set environment variable (no spaces around '=')
-ENV server.port=4352
+ENV server.port=8890
 
 # Use ENTRYPOINT for better override behavior in container orchestration
 ENTRYPOINT ["java", "-jar", "app.jar"]
